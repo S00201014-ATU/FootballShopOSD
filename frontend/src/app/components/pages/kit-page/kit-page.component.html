@@ -1,0 +1,29 @@
+<app-not-found
+[visible]="!kit" notFoundMessage="Kit Not Found"
+notFoundMessage="Kit Not Found"
+resetLinkText="Back To Homepage"
+></app-not-found>
+
+<div *ngIf="kit" class="container">
+  <img [src]="kit.imageUrl" [alt]="kit.name">
+
+  <div class="details">
+    <div class="header">`
+      <span class="name">
+        {{kit.name}}
+      </span>
+      <span class="favorite {{kit.favorite? '': 'not'}}">❤</span>
+    </div>
+
+    <div class="price">
+      <span>
+        {{kit.price | currency:'EUR'}}
+      </span>
+    </div>
+
+    <div>
+      <button (click)="addToCart()">Add to cart</button>
+    </div>
+  </div>
+</div>
+
