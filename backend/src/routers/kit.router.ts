@@ -7,7 +7,6 @@ const router = Router();
 
 router.get("/seed", asyncHandler(
     async (req, res) =>{
-        res.send(sample_kits);
         const kitsCount = await KitModel.countDocuments();
         if(kitsCount>0){
             res.send("Seed is already done!");
@@ -19,7 +18,7 @@ router.get("/seed", asyncHandler(
     }
 ))
 
-router.get("/api/kits", (req, res) =>{
+router.get("/", (req, res) =>{
     res.send(sample_kits);
 })
 
