@@ -8,6 +8,7 @@ import { CartPageComponent } from './components/pages/cart-page/cart-page.compon
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { ToastrModule } from 'ngx-toastr';
+import { NgxStripeModule } from 'ngx-stripe';
 
 export const routes: Routes = [
   {
@@ -38,7 +39,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), ToastrModule.forRoot({timeOut:3000, positionClass: 'toast-bottom-right', newestOnTop: false})],
+  imports: [RouterModule.forRoot(routes), ToastrModule.forRoot({timeOut:3000, positionClass: 'toast-bottom-right', newestOnTop: false}), NgxStripeModule.forRoot()],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
