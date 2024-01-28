@@ -1,5 +1,4 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './components/pages/home/home.component';
@@ -32,9 +31,7 @@ export const routes: Routes = [
   {
     path: 'checkout', component:CheckoutPageComponent
   },
-  {
-    path: 'payment', component: PaymentPageComponent
-  }
+
 
 ];
 
